@@ -1,0 +1,22 @@
+{
+	"name": "directus-extension-metric-extra",
+	"version": "1.0.0",
+	"keywords": [
+		"directus",
+		"directus-extension",
+		"directus-custom-panel"
+	],
+	"directus:extension": {
+		"type": "panel",
+		"path": "dist/index.js",
+		"source": "src/index.js",
+		"host": "^9.5.0"
+	},
+	"scripts": {
+		"build": "directus-extension build"
+	},
+	"devDependencies": {
+		"@directus/extensions-sdk": "9.5.0",
+		"vue": "^3.2.29"
+	}
+}
