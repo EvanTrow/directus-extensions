@@ -1,5 +1,8 @@
 import { defineModule } from '@directus/extensions-sdk';
-import ModuleComponent from './module.vue';
+
+import OrgChart from './routes/orgChart.vue';
+import NotFound from './routes/notFound.vue';
+
 
 export default defineModule({
 	id: 'domain',
@@ -12,7 +15,12 @@ export default defineModule({
 		},
 		{
 			path: 'orgchart',
-			component: ModuleComponent,
+			component: OrgChart,
+		},
+		{
+			name: 'settings-not-found',
+			path: ':_(.+)+',
+			component: NotFound,
 		},
 	],
 	preRegisterCheck(user, permissions) {

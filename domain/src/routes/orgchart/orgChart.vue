@@ -14,10 +14,10 @@
 </template>
 
 <script lang="ts">
-import { useI18n } from 'vue-i18n';
+// import { useI18n } from 'vue-i18n';
 import { defineComponent } from 'vue';
 
-import DomainNavigation from './components/navigation.vue';
+import DomainNavigation from '../../components/navigation.vue';
 
 export default defineComponent({
 	components: { DomainNavigation },
