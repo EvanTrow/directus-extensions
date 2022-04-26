@@ -43,8 +43,8 @@ export default ({ action }) => {
 						description: `<div><b>Issues:</b><br>${payload.payload.issues}<br><br><br><b>Road Blocks:</b><br>${payload.payload.roadBlocks}<br><br><br><b>Notes:</b><br>${payload.payload.notes}</div>`,
 						status: 8,
 						source: 1001,
-						impact: payload.payload.userImpact,
-						priority: payload.payload.ourPriority,
+						impact: payload.payload.userImpact | 1,
+						priority: payload.payload.ourPriority | 1,
 					},
 				})
 				.then(async (response) => {
@@ -62,8 +62,8 @@ export default ({ action }) => {
 								Authorization: auth.helpdesk_token,
 							},
 							data: {
-								impact: payload.payload.userImpact,
-								priority: payload.payload.ourPriority,
+								impact: payload.payload.userImpact | 1,
+								priority: payload.payload.ourPriority | 1,
 								custom_fields: {
 									status_notes: `${payload.key}`,
 								},
