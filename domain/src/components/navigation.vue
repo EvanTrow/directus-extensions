@@ -19,9 +19,9 @@ export default defineComponent({
 
 		const navItems = [
 			{
-				icon: 'account_tree',
-				name: 'Org Chart',
-				to: `/domain/orgchart`,
+				icon: 'account_circle',
+				name: 'Profile Images',
+				to: `/domain/profile-images`,
 			},
 		];
 
